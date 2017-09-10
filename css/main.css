@@ -6,7 +6,6 @@ html {
 }
 body {
   margin: 0;
-  
 }
 article,
 aside,
@@ -1820,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a6a7ff;
+  background: #f7fffa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2985,4 +2984,49 @@ pre .javascript .function {
 }
 .footer {
   bottom: auto;
+}
+body {
+  position: relative;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #555;
+  background: url("/images/sky.gif");
+}
+::selection {
+  background: #6c6;
+  color: #fff;
+}
+.site-meta {
+  background: #eee;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  transition: all 500ms ease;
+}
+.site-meta:hover {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  -o-transform: translateY(-6px);
+  transform: translateY(-6px);
+  box-shadow: 0 26px 40px -24px rgba(0,36,100,0.3);
+}
+.custom-logo-site-title .site-title {
+  font-size: 36px;
+}
+.custom-logo-site-title .site-title,
+.site-subtitle {
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0041a5), to(#c03f3c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-size: 400% 400%;
+  -webkit-animation: masked-animation 10s linear infinite alternate;
+}
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
 }
