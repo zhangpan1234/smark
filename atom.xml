@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://smark.site/"/>
-  <updated>2017-09-09T13:59:46.149Z</updated>
+  <updated>2017-09-09T13:57:24.996Z</updated>
   <id>http://smark.site/</id>
   
   <author>
@@ -15,51 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>news</title>
-    <link href="http://smark.site/2017/09/08/news/"/>
-    <id>http://smark.site/2017/09/08/news/</id>
-    <published>2017-09-07T17:57:53.000Z</published>
-    <updated>2017-09-09T13:59:46.149Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="javascrit" scheme="http://smark.site/categories/javascrit/"/>
-    
-    
-      <category term="javascript" scheme="http://smark.site/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Excel分理数据</title>
-    <link href="http://smark.site/2017/09/06/blogs/"/>
-    <id>http://smark.site/2017/09/06/blogs/</id>
-    <published>2017-09-06T05:52:48.356Z</published>
-    <updated>2017-09-09T13:58:40.029Z</updated>
-    
-    <content type="html"><![CDATA[<p>场景：将货号和尺码分离</p><p>实现：数据工具栏–空格分离</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;场景：将货号和尺码分离&lt;/p&gt;
-&lt;p&gt;实现：数据工具栏–空格分离&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="excel" scheme="http://smark.site/categories/excel/"/>
-    
-    
-      <category term="excel" scheme="http://smark.site/tags/excel/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
