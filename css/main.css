@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2;
+  background: #8bd78e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2985,6 +2985,16 @@ pre .javascript .function {
 .footer {
   bottom: auto;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#330), to(#333));
+}
+body::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0041a5), to(#c03f3c));
+  -webkit-background-size: 200% 200%;
+  -webkit-animation: scroll-animation 6s linear infinite alternate;
+  border-radius: 5px;
+}
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -2999,7 +3009,7 @@ body {
 }
 .site-meta {
   background: #eee;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 3px rgba(0,0,0,0.06);
   transition: all 500ms ease;
 }
 .site-meta:hover {
@@ -3023,6 +3033,14 @@ body {
   -webkit-animation: masked-animation 10s linear infinite alternate;
 }
 @-webkit-keyframes masked-animation {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+@-webkit-keyframes scroll-animation {
   0% {
     background-position: left top;
   }
