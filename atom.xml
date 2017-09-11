@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://smark.site/"/>
-  <updated>2017-09-11T15:31:11.291Z</updated>
+  <updated>2017-09-11T16:03:23.475Z</updated>
   <id>http://smark.site/</id>
   
   <author>
@@ -17,20 +17,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CSS3创建一个三角形</title>
-    <link href="http://smark.site/2017/09/11/CSS3%E5%88%9B%E5%BB%BA%E4%B8%89%E8%A7%92%E5%BD%A2/"/>
-    <id>http://smark.site/2017/09/11/CSS3创建三角形/</id>
-    <published>2017-09-11T15:07:32.182Z</published>
-    <updated>2017-09-11T15:31:11.291Z</updated>
+    <title>Javascript经典案例(var a=b=num)</title>
+    <link href="http://smark.site/2017/09/11/js%E7%BB%8F%E5%85%B8%E6%A1%88%E5%88%9701/"/>
+    <id>http://smark.site/2017/09/11/js经典案列01/</id>
+    <published>2017-09-11T15:45:19.716Z</published>
+    <updated>2017-09-11T16:03:23.475Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="CSS3创建一个三角形"><a href="#CSS3创建一个三角形" class="headerlink" title="CSS3创建一个三角形"></a>CSS3创建一个三角形</h3><hr><blockquote><p>原理：将上丶右丶左三条边隐藏掉（颜色值设置为transparrent）<br>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;demo&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p></blockquote><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.demo&#123;</div><div class="line">     width:0;</div><div class="line">     height:0;</div><div class="line">     border-width:100px;</div><div class="line">     border-style:solid;</div><div class="line">     border-color:transparent transparent red transparent;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p><p><img src="http://images2015.cnblogs.com/blog/1126359/201705/1126359-20170509145647066-1735614299.png" alt="三角形"></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>关于下面代码的输出结果，为什么？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">var a = b =3;</div><div class="line">&#125;)();</div><div class="line">console.log(&quot;a defined?&quot;+(typeof a !== &apos;undifined&apos;));</div><div class="line">console.log(&quot;b defined?&quot;+(typeof b !== &apos;undifined&apos;));</div></pre></td></tr></table></figure></p><blockquote><p>分析：由于a和b都定义在函数的封闭范围内，并且都始于var关键字,var a=b=3  ====&gt;&gt; var b = 3;var a = b; 显然b是一个全局变量.<br>所以结果是:</p><blockquote><p>a defined? false bdefined? true</p></blockquote></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;CSS3创建一个三角形&quot;&gt;&lt;a href=&quot;#CSS3创建一个三角形&quot; class=&quot;headerlink&quot; title=&quot;CSS3创建一个三角形&quot;&gt;&lt;/a&gt;CSS3创建一个三角形&lt;/h3&gt;&lt;hr&gt;
-&lt;blockquote&gt;
+        &lt;hr&gt;
+&lt;p&gt;关于下面代码的输出结果，为什么？&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://smark.site/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="javascript" scheme="http://smark.site/categories/%E5%89%8D%E7%AB%AF/javascript/"/>
+    
+    
+      <category term="前端" scheme="http://smark.site/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="javascript" scheme="http://smark.site/tags/javascript/"/>
+    
+      <category term="javascript软实力" scheme="http://smark.site/tags/javascript%E8%BD%AF%E5%AE%9E%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3创建一个三角形</title>
+    <link href="http://smark.site/2017/09/11/CSS3%E5%88%9B%E5%BB%BA%E4%B8%89%E8%A7%92%E5%BD%A2/"/>
+    <id>http://smark.site/2017/09/11/CSS3创建三角形/</id>
+    <published>2017-09-11T15:07:32.182Z</published>
+    <updated>2017-09-11T15:56:41.577Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h3 id="CSS3创建一个三角形"><a href="#CSS3创建一个三角形" class="headerlink" title="CSS3创建一个三角形"></a>CSS3创建一个三角形</h3><blockquote><p>原理：将上丶右丶左三条边隐藏掉（颜色值设置为transparrent）<br>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;demo&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p></blockquote><p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.demo&#123;</div><div class="line">     width:0;</div><div class="line">     height:0;</div><div class="line">     border-width:100px;</div><div class="line">     border-style:solid;</div><div class="line">     border-color:transparent transparent red transparent;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p><p><img src="http://images2015.cnblogs.com/blog/1126359/201705/1126359-20170509145647066-1735614299.png" alt="三角形"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h3 id=&quot;CSS3创建一个三角形&quot;&gt;&lt;a href=&quot;#CSS3创建一个三角形&quot; class=&quot;headerlink&quot; title=&quot;CSS3创建一个三角形&quot;&gt;&lt;/a&gt;CSS3创建一个三角形&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;原理：将上丶右丶左三条边隐藏掉（
       
     
@@ -54,16 +86,9 @@
     <link href="http://smark.site/2017/09/06/hello-world/"/>
     <id>http://smark.site/2017/09/06/hello-world/</id>
     <published>2017-09-05T18:50:41.740Z</published>
-    <updated>2017-09-11T13:36:12.814Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    <updated>2017-09-11T15:34:46.743Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
     
     </summary>
     
