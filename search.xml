@@ -3,6 +3,53 @@
   
     
     <entry>
+      <title><![CDATA[2017前端开发知识点总结]]></title>
+      <url>/2017/09/12/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93v1.0/</url>
+      <content type="html"><![CDATA[<hr>
+<h3 id="2017前端开发知识点总结"><a href="#2017前端开发知识点总结" class="headerlink" title="2017前端开发知识点总结"></a>2017前端开发知识点总结</h3><blockquote>
+<p>HTML&amp;CSS：</p>
+<blockquote>
+<p>   对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox</p>
+</blockquote>
+<p>JavaScript：</p>
+<blockquote>
+<p>   数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs</p>
+</blockquote>
+<p>其他：</p>
+<blockquote>
+<p>   移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力</p>
+</blockquote>
+</blockquote>
+<h4 id="部分知识点详解："><a href="#部分知识点详解：" class="headerlink" title="部分知识点详解："></a>部分知识点详解：</h4><blockquote>
+<p>1 . DOM结构——两个节点之间可能存在哪些关系以及如何在节点之间任意移动</p>
+<blockquote>
+<p>document.documentElement     返回文档的根节点<html><br>document.body     <body><br>document.activeElement 返回当前文档中被击活的标签节点(ie)<br>event.fromElement        返回鼠标移出的源节点(ie)<br>event.toElement       返回鼠标移入的源节点(ie)<br>event.srcElement     返回激活事件的源节点(ie)<br>event.target         返回激活事件的源节点(firefox)<br>当前对象为node<br>返回父节点：node.parentNode, node.parendElement,<br>返回所有子节点：node.childNodes（包含文本节点及标签节点）,node.children<br>返回第一个子节点：node.firstChild<br>返回最后一个子节点： node.lastChild<br>返回同属上一个子节点：node.nextSibling<br>返回同属下一个子节点：node.previousSibling<br>parentNode和parentElement功能一样，childNodes和children功能一样。但是parentNode和childNodes是符合W3C标准的，可以说比较通用。而另外两个只是IE支持，不是标准，Firefox就不支持 ,所以大家只要记得有parentElement和children就行了 </body></html></p>
+</blockquote>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> 面试 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 面试 </tag>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Javascript经典案例(var a=b=num)]]></title>
       <url>/2017/09/11/js%E7%BB%8F%E5%85%B8%E6%A1%88%E5%88%9701/</url>
       <content type="html"><![CDATA[<hr>

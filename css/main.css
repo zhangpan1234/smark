@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5e70f4;
+  background: #3699c4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3001,15 +3001,15 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: url("/images/sky.gif");
+  background: url("/images/back1.jpg") no-repeat fixed center;
 }
 ::selection {
   background: #6c6;
   color: #fff;
 }
 .site-meta {
-  background: #eee;
-  box-shadow: 0 8px 3px rgba(0,0,0,0.06);
+  background: #f9f9f9;
+  box-shadow: 0 8px 13px rgba(0,0,0,0.06);
   transition: all 500ms ease;
 }
 .site-meta:hover {
