@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mr.Smark</title>
+  <title>雅竹轩~</title>
   
   <subtitle>web前端开发 Python爱好者</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://smark.site/</id>
   
   <author>
-    <name>zhangpan</name>
+    <name>Mr.Smark</name>
     
   </author>
   
