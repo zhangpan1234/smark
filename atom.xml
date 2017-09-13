@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://smark.site/"/>
-  <updated>2017-09-12T05:40:46.231Z</updated>
+  <updated>2017-09-12T14:37:24.275Z</updated>
   <id>http://smark.site/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js面向对象编程-继承</title>
+    <link href="http://smark.site/2017/09/12/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E7%BB%A7%E6%89%BF/"/>
+    <id>http://smark.site/2017/09/12/js面向对象编程-继承/</id>
+    <published>2017-09-12T13:52:54.209Z</published>
+    <updated>2017-09-12T14:37:24.275Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>在js中实例的属性和行为是由构造函数和原型两部分组成的，我们定义两个类Animal和Bird，他们在内存中有自己的构造函数和原型。如果想让Bird继承自Animal，那么我们需要把Animal构造函数和原型中的属性和行为全部传给Bird的构造函数和原型。理清思路以后，我们分步来完成Animal和Bird的继承功能。</p></blockquote><p>首先我们需要一个Animal类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function Animal(name)&#123;</div><div class="line">this.name = name;</div><div class="line">this.type = &apos;Animal&apos;</div><div class="line">&#125;</div><div class="line">Animal.prototype = &#123;</div><div class="line">say()&#123;</div><div class="line">alert(&quot;&apos;I&apos;m a(an)&quot;+this.type+&quot;,my name is&quot;+this.name);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>接下来定义一个Bird类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function Bird()&#123;&#125;;</div><div class="line">Bird.prototype = &#123;&#125;;</div></pre></td></tr></table></figure></p><p>最后使Bird继承自Animal，把Animal构造函数和原型中的属性和行为全部传给Bird的构造函数和原型：</p><blockquote><blockquote><p><strong>构造函数</strong>直接使用call或者apply,此时的this指向Bird</p></blockquote></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Bird(name)&#123;</div><div class="line">    Animal.call(this,name);</div><div class="line">&#125;</div><div class="line">Bird.prototype=&#123;&#125;；</div><div class="line">var myBird=new Bird(&quot;feimos&quot;);</div><div class="line">alert(myBird.type);      //输出animal</div></pre></td></tr></table></figure><p>实现原型中属性和行为的继承。能否将Animal类的原型直接传给Bird类的原型呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Bird.prototype = Animal.prototype;</div><div class="line">var mybird = new Bird(&apos;smark&apos;);</div><div class="line">mybird.say();       //输出I&apos;m a(an) animal , my name is smark</div></pre></td></tr></table></figure></p><p>在Bird的原型上增加一个hubby方法呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Bird.prototype.hubby = function()&#123;</div><div class="line">alert(&apos;basketball&apos;)</div><div class="line">&#125;</div><div class="line">var mybird = new Bird(&apos;smark&apos;);</div><div class="line">mybird.say();       //输出I&apos;m a(an) animal , my name is smark</div><div class="line">mybird.hubby();//输出basketball</div><div class="line"></div><div class="line">var newobj = new Animal(&apos;zhangsan&apos;);</div><div class="line">newobj.hubby();//输出basketball</div></pre></td></tr></table></figure></p><p>可以看到新增加的hubby方法同样被加入到了Animal，是因为他们使用了同一个原型属性，分别指向了同一份数据，数据变更会相互影响。在js中，赋值语句会用传址和传值两种不同的方式进行赋值，如果是数值型、布尔型、字符型等基本数据类型，在进行赋值时会将数据赋值一份，将复制的数据进行赋值，也就是<strong><em>传值</em></strong>，如果是数组、hash对象等复杂数据类型，在进行赋值时会直接用<strong><em>内存地址赋值</em></strong>，而不是将数据复制一份，也就是所说的<strong><em>传址</em></strong>。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在js中实例的属性和行为是由构造函数和原型两部分组成的，我们定义两个类Animal和Bird，他们在内存中有自己的构造函数和原型。如果想让Bird继承自Animal，那么我们需要把Animal构造函数和原型中的属性和行为全部传给Bird的
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://smark.site/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://smark.site/tags/javascript/"/>
+    
+      <category term="继承" scheme="http://smark.site/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017前端开发知识点总结</title>
     <link href="http://smark.site/2017/09/12/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93v1.0/"/>
     <id>http://smark.site/2017/09/12/前端开发知识点总结v1.0/</id>
     <published>2017-09-12T04:43:24.978Z</published>
-    <updated>2017-09-12T05:40:46.231Z</updated>
+    <updated>2017-09-12T12:05:58.516Z</updated>
     
-    <content type="html"><![CDATA[<hr><h3 id="2017前端开发知识点总结"><a href="#2017前端开发知识点总结" class="headerlink" title="2017前端开发知识点总结"></a>2017前端开发知识点总结</h3><blockquote><p>HTML&amp;CSS：</p><blockquote><p>   对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox</p></blockquote><p>JavaScript：</p><blockquote><p>   数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs</p></blockquote><p>其他：</p><blockquote><p>   移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力</p></blockquote></blockquote><h4 id="部分知识点详解："><a href="#部分知识点详解：" class="headerlink" title="部分知识点详解："></a>部分知识点详解：</h4><blockquote><p>1 . DOM结构——两个节点之间可能存在哪些关系以及如何在节点之间任意移动</p><blockquote><p>document.documentElement     返回文档的根节点<html><br>document.body     <body><br>document.activeElement 返回当前文档中被击活的标签节点(ie)<br>event.fromElement        返回鼠标移出的源节点(ie)<br>event.toElement       返回鼠标移入的源节点(ie)<br>event.srcElement     返回激活事件的源节点(ie)<br>event.target         返回激活事件的源节点(firefox)<br>当前对象为node<br>返回父节点：node.parentNode, node.parendElement,<br>返回所有子节点：node.childNodes（包含文本节点及标签节点）,node.children<br>返回第一个子节点：node.firstChild<br>返回最后一个子节点： node.lastChild<br>返回同属上一个子节点：node.nextSibling<br>返回同属下一个子节点：node.previousSibling<br>parentNode和parentElement功能一样，childNodes和children功能一样。但是parentNode和childNodes是符合W3C标准的，可以说比较通用。而另外两个只是IE支持，不是标准，Firefox就不支持 ,所以大家只要记得有parentElement和children就行了 </body></html></p></blockquote></blockquote>]]></content>
+    <content type="html"><![CDATA[<hr><h3 id="2017前端开发知识点总结"><a href="#2017前端开发知识点总结" class="headerlink" title="2017前端开发知识点总结"></a>2017前端开发知识点总结</h3><blockquote><p>HTML&amp;CSS：</p><blockquote><p>   对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox</p></blockquote><p>JavaScript：</p><blockquote><p>   数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs</p></blockquote><p>其他：</p><blockquote><p>   移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力</p></blockquote></blockquote><h4 id="部分知识点详解："><a href="#部分知识点详解：" class="headerlink" title="部分知识点详解："></a>部分知识点详解：</h4><blockquote><p>1 . DOM结构——两个节点之间可能存在哪些关系以及如何在节点之间任意移动</p><blockquote><p>document.documentElement     返回文档的根节点<html><br>document.body     <body><br>document.activeElement 返回当前文档中被击活的标签节点(ie)<br>event.fromElement        返回鼠标移出的源节点(ie)<br>event.toElement       返回鼠标移入的源节点(ie)<br>event.srcElement     返回激活事件的源节点(ie)<br>event.target         返回激活事件的源节点(firefox)<br>当前对象为node<br>返回父节点：node.parentNode, node.parendElement,<br>返回所有子节点：node.childNodes（包含文本节点及标签节点）,node.children<br>返回第一个子节点：node.firstChild<br>返回最后一个子节点： node.lastChild<br>返回同属上一个子节点：node.previousSibling<br>返回同属下一个子节点： node.nextSibling<br>parentNode和parentElement功能一样，childNodes和children功能一样。但是parentNode和childNodes是符合W3C标准的，可以说比较通用。而另外两个只是IE支持，不是标准，Firefox就不支持 ,所以大家只要记得有parentElement和children就行了 </body></html></p></blockquote><p>2 .  DOM操作——怎样添加、移除、移动、复制、创建和查找节点</p><blockquote><p>（1）创建新节点<br>      createDocumentFragment()    //创建一个DOM片段<br>      createElement()   //创建一个具体的元素<br>      createTextNode()   //创建一个文本节点<br>（2）添加、移除、替换、插入<br>      appendChild()<br>      removeChild()<br>      replaceChild()<br>      insertBefore()<br>（3）查找<br>      getElementsByTagName()    //通过标签名称<br>      getElementsByName()    //通过元素的Name属性的值<br>      getElementById()    //通过元素Id，唯一性</p></blockquote></blockquote>]]></content>
     
     <summary type="html">
     
@@ -115,16 +144,28 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://smark.site/2017/09/06/hello-world/"/>
-    <id>http://smark.site/2017/09/06/hello-world/</id>
+    <title>js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</title>
+    <link href="http://smark.site/2017/09/06/javascript%E4%BA%8B%E4%BB%B6/"/>
+    <id>http://smark.site/2017/09/06/javascript事件/</id>
     <published>2017-09-05T18:50:41.740Z</published>
-    <updated>2017-09-11T15:34:46.743Z</updated>
+    <updated>2017-09-12T13:53:16.453Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h3 id="事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。"><a href="#事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。" class="headerlink" title="事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。"></a>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</h3><blockquote><p>在浏览器解析的啥时候，有两种触发方式，一种叫Bubbling（冒泡），另外一种是Capturing（捕获），冒泡的方式效果就是当一个DOM元素的某事件例如click事件被fire时，依次它的父元素的click事件也被fire(触发)，一直传递到最顶层的body元素为止。而捕获的触发方式正好相反，当某个元素的click事件被触发时，先从最顶层的body元素click事件被触发开始，一直传递到真正被触发的元素为止。</p></blockquote><p>1、Traditional Module<br>传统方式的事件模型即直接在DOM元素上绑定事件处理器，例如—<br>window.onload=function(){…}<br>obj.onmouseover=function(e){…}<br>obj.onclick=function(){…}</p><p>首先这种方式是无论在IE还是Firefox等其他浏览器上都可以成功运行的通用方式。这便是它最大的优势了，而且在Event处理函数内部的this变量无一例外的都只想被绑定的DOM元素，这使得Js程序员可以大大利用this关键字做很多事情。</p><p>至于它的缺点也很明显，就是传统方式只支持Bubbling，而不支持Capturing，并且一次只能绑定一个事件处理器在DOM元素上，无法实现多Handler绑定。最后就是function参数中的event参数只对非IE浏览器有效果(因为IE浏览器有特制的window.event)。</p><p>2、W3C (Firefox.e.g) EventModule<br>Firefox等浏览器很坚决的遵循W3C标准来制定浏览器事件模型，使用addEventListener和removeEventListener两个函数，看几个例子—<br>window.addEventListener(‘load’,function(){…},false);<br>document.body.addEventListener(‘keypress’,function{…},false);<br>obj.addEventListener(‘mouseover’,MV,true);<br>function MV(){…}</p><p>addEventListener带有三个参数，第一个参数是事件类型，就是我们熟知的那些事件名字去掉前面的’on’，第二个参数是处理函数，可以直接给函数字面量或者函数名，第三个参数是boolean值，表示事件是否支持Capturing。</p><p>W3C的事件模型优点是Bubbling和Capturing都支持，并且可以在一个DOM元素上绑定多个事件处理器，各自并不会冲突。并且在处理函数内部，this关键字仍然可以使用只想被绑定的DOM元素。另外function参数列表的第一个位置(不管是否显示调用)，都永远是event对象的引用。</p><p>至于它的缺点，很不幸的就只有在市场份额最大的IE浏览器下不可使用这一点。</p><p>3、IE Event Module<br>IE自己的事件模型跟W3C的类似，但主要是通过attachEvent和detachEvent两个函数来实现的。依旧看几个例子吧—<br>window.attachEvent(‘onload’,function(){…});<br>document.body.attachEvent(‘onkeypress’,myKeyHandler);</p><p>可以发现它跟W3C的区别是没有第三个参数，而且第一个表示事件类型的参数也必须把’on’给加上。这种方式的优点就是能绑定多个事件处理函数在同一个DOM元素上。</p><p>至于它的缺点，为什么如今在实际开发中很少见呢？首先IE浏览器本身只支持Bubbling不支持Capturing；而且在事件处理的function内部this关键字也无法使用，因为this永远都只想window object这个全局对象。要想得到event对象必须通过window.event方式，最后一点，在别的浏览器中，它显然是无法工作的。</p><p>最后我在推荐两个必须知道的IE和W3C标准的区别用法吧—<br>1、当我们需要阻止浏览器某DOM元素的默认行为的时候在W3C下调用e.preventDefault()，而在IE下则通过window.event.returnValue＝false来实现。<br>2、当我们要阻止事件冒泡的时候，在W3C标准里调用e.stopPropagation()，而在IE下通过设置window.event.cancelBubble=true来实现。</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;hr&gt;
+&lt;h3 id=&quot;事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。&quot;&gt;&lt;a href=&quot;#事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。&quot; class=&quot;headerlink&quot; title=&quot;事件 —— 如何使用事件，以及IE
+      
+    
     </summary>
     
+      <category term="javascript" scheme="http://smark.site/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://smark.site/tags/javascript/"/>
     
   </entry>
   

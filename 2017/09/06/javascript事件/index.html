@@ -93,7 +93,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -111,16 +111,18 @@
 
 
 
-<meta name="description" content="种豆得瓜~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr.Smark">
-<meta property="og:url" content="http://smark.site/archives/2017/09/index.html">
+<meta name="description" content="事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。 在浏览器解析的啥时候，有两种触发方式，一种叫Bubbling（冒泡），另外一种是Capturing（捕获），冒泡的方式效果就是当一个DOM元素的某事件例如click事件被fire时，依次它的父元素的click事件也被fire(触发)，一直传递到最顶层的body元素为止。而捕获的触发方式正好相反，当某个元素的click事件被触">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。">
+<meta property="og:url" content="http://smark.site/2017/09/06/javascript事件/index.html">
 <meta property="og:site_name" content="Mr.Smark">
-<meta property="og:description" content="种豆得瓜~">
+<meta property="og:description" content="事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。 在浏览器解析的啥时候，有两种触发方式，一种叫Bubbling（冒泡），另外一种是Capturing（捕获），冒泡的方式效果就是当一个DOM元素的某事件例如click事件被fire时，依次它的父元素的click事件也被fire(触发)，一直传递到最顶层的body元素为止。而捕获的触发方式正好相反，当某个元素的click事件被触">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-12T13:53:16.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr.Smark">
-<meta name="twitter:description" content="种豆得瓜~">
+<meta name="twitter:title" content="js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。">
+<meta name="twitter:description" content="事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。 在浏览器解析的啥时候，有两种触发方式，一种叫Bubbling（冒泡），另外一种是Capturing（捕获），冒泡的方式效果就是当一个DOM元素的某事件例如click事件被fire时，依次它的父元素的click事件也被fire(触发)，一直传递到最顶层的body元素为止。而捕获的触发方式正好相反，当某个元素的click事件被触">
 
 
 
@@ -150,13 +152,13 @@
 
 
 
-  <link rel="canonical" href="http://smark.site/archives/2017/09/"/>
+  <link rel="canonical" href="http://smark.site/2017/09/06/javascript事件/"/>
 
 
 
 
 
-  <title>归档 | Mr.Smark</title>
+  <title>js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。 | Mr.Smark</title>
   
 
 
@@ -175,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,222 +315,260 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://smark.site/2017/09/06/javascript事件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhangpan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Smark">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-06T02:50:41+08:00">
+                2017-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2017/09/06/javascript事件/" class="leancloud_visitors" data-flag-title="js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/js面向对象编程-继承/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">js面向对象编程-继承</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  968
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T21:52:54+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/前端开发知识点总结v1.0/" itemprop="url">
-              
-                <span itemprop="name">2017前端开发知识点总结</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T12:43:24+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/js经典案列01/" itemprop="url">
-              
-                <span itemprop="name">Javascript经典案例(var a=b=num)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T23:45:19+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <hr>
+<h3 id="事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。"><a href="#事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。" class="headerlink" title="事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。"></a>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</h3><blockquote>
+<p>在浏览器解析的啥时候，有两种触发方式，一种叫Bubbling（冒泡），另外一种是Capturing（捕获），冒泡的方式效果就是当一个DOM元素的某事件例如click事件被fire时，依次它的父元素的click事件也被fire(触发)，一直传递到最顶层的body元素为止。而捕获的触发方式正好相反，当某个元素的click事件被触发时，先从最顶层的body元素click事件被触发开始，一直传递到真正被触发的元素为止。</p>
+</blockquote>
+<p>1、Traditional Module<br>传统方式的事件模型即直接在DOM元素上绑定事件处理器，例如—<br>window.onload=function(){…}<br>obj.onmouseover=function(e){…}<br>obj.onclick=function(){…}</p>
+<p>首先这种方式是无论在IE还是Firefox等其他浏览器上都可以成功运行的通用方式。这便是它最大的优势了，而且在Event处理函数内部的this变量无一例外的都只想被绑定的DOM元素，这使得Js程序员可以大大利用this关键字做很多事情。</p>
+<p>至于它的缺点也很明显，就是传统方式只支持Bubbling，而不支持Capturing，并且一次只能绑定一个事件处理器在DOM元素上，无法实现多Handler绑定。最后就是function参数中的event参数只对非IE浏览器有效果(因为IE浏览器有特制的window.event)。</p>
+<p>2、W3C (Firefox.e.g) EventModule<br>Firefox等浏览器很坚决的遵循W3C标准来制定浏览器事件模型，使用addEventListener和removeEventListener两个函数，看几个例子—<br>window.addEventListener(‘load’,function(){…},false);<br>document.body.addEventListener(‘keypress’,function{…},false);<br>obj.addEventListener(‘mouseover’,MV,true);<br>function MV(){…}</p>
+<p>addEventListener带有三个参数，第一个参数是事件类型，就是我们熟知的那些事件名字去掉前面的’on’，第二个参数是处理函数，可以直接给函数字面量或者函数名，第三个参数是boolean值，表示事件是否支持Capturing。</p>
+<p>W3C的事件模型优点是Bubbling和Capturing都支持，并且可以在一个DOM元素上绑定多个事件处理器，各自并不会冲突。并且在处理函数内部，this关键字仍然可以使用只想被绑定的DOM元素。另外function参数列表的第一个位置(不管是否显示调用)，都永远是event对象的引用。</p>
+<p>至于它的缺点，很不幸的就只有在市场份额最大的IE浏览器下不可使用这一点。</p>
+<p>3、IE Event Module<br>IE自己的事件模型跟W3C的类似，但主要是通过attachEvent和detachEvent两个函数来实现的。依旧看几个例子吧—<br>window.attachEvent(‘onload’,function(){…});<br>document.body.attachEvent(‘onkeypress’,myKeyHandler);</p>
+<p>可以发现它跟W3C的区别是没有第三个参数，而且第一个表示事件类型的参数也必须把’on’给加上。这种方式的优点就是能绑定多个事件处理函数在同一个DOM元素上。</p>
+<p>至于它的缺点，为什么如今在实际开发中很少见呢？首先IE浏览器本身只支持Bubbling不支持Capturing；而且在事件处理的function内部this关键字也无法使用，因为this永远都只想window object这个全局对象。要想得到event对象必须通过window.event方式，最后一点，在别的浏览器中，它显然是无法工作的。</p>
+<p>最后我在推荐两个必须知道的IE和W3C标准的区别用法吧—<br>1、当我们需要阻止浏览器某DOM元素的默认行为的时候在W3C下调用e.preventDefault()，而在IE下则通过window.event.returnValue＝false来实现。<br>2、当我们要阻止事件冒泡的时候，在W3C标准里调用e.stopPropagation()，而在IE下通过设置window.event.cancelBubble=true来实现。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/CSS3创建三角形/" itemprop="url">
-              
-                <span itemprop="name">CSS3创建一个三角形</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T23:07:32+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/06/javascript事件/" itemprop="url">
-              
-                <span itemprop="name">js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-06T02:50:41+08:00"
-              content="2017-09-06" >
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/11/CSS3创建三角形/" rel="prev" title="CSS3创建一个三角形">
+                CSS3创建一个三角形 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -536,6 +576,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDc2NS83MzE3"></div>
+    
+  </div>
+
 
         </div>
         
@@ -556,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -663,6 +718,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件-——-如何使用事件，以及IE和标准DOM事件模型之间存在的差别。"><span class="nav-number">1.</span> <span class="nav-text">事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -807,6 +878,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
@@ -835,6 +910,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Mr.Smark">
 <meta property="og:description" content="2017前端开发知识点总结 HTML&amp;amp;CSS：     对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox  JavaScript：     数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-12T05:40:46.231Z">
+<meta property="og:updated_time" content="2017-09-12T12:05:58.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017前端开发知识点总结">
 <meta name="twitter:description" content="2017前端开发知识点总结 HTML&amp;amp;CSS：     对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox  JavaScript：     数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端">
@@ -489,7 +489,11 @@
 <h4 id="部分知识点详解："><a href="#部分知识点详解：" class="headerlink" title="部分知识点详解："></a>部分知识点详解：</h4><blockquote>
 <p>1 . DOM结构——两个节点之间可能存在哪些关系以及如何在节点之间任意移动</p>
 <blockquote>
-<p>document.documentElement     返回文档的根节点<html><br>document.body     <body><br>document.activeElement 返回当前文档中被击活的标签节点(ie)<br>event.fromElement        返回鼠标移出的源节点(ie)<br>event.toElement       返回鼠标移入的源节点(ie)<br>event.srcElement     返回激活事件的源节点(ie)<br>event.target         返回激活事件的源节点(firefox)<br>当前对象为node<br>返回父节点：node.parentNode, node.parendElement,<br>返回所有子节点：node.childNodes（包含文本节点及标签节点）,node.children<br>返回第一个子节点：node.firstChild<br>返回最后一个子节点： node.lastChild<br>返回同属上一个子节点：node.nextSibling<br>返回同属下一个子节点：node.previousSibling<br>parentNode和parentElement功能一样，childNodes和children功能一样。但是parentNode和childNodes是符合W3C标准的，可以说比较通用。而另外两个只是IE支持，不是标准，Firefox就不支持 ,所以大家只要记得有parentElement和children就行了 </body></html></p>
+<p>document.documentElement     返回文档的根节点<html><br>document.body     <body><br>document.activeElement 返回当前文档中被击活的标签节点(ie)<br>event.fromElement        返回鼠标移出的源节点(ie)<br>event.toElement       返回鼠标移入的源节点(ie)<br>event.srcElement     返回激活事件的源节点(ie)<br>event.target         返回激活事件的源节点(firefox)<br>当前对象为node<br>返回父节点：node.parentNode, node.parendElement,<br>返回所有子节点：node.childNodes（包含文本节点及标签节点）,node.children<br>返回第一个子节点：node.firstChild<br>返回最后一个子节点： node.lastChild<br>返回同属上一个子节点：node.previousSibling<br>返回同属下一个子节点： node.nextSibling<br>parentNode和parentElement功能一样，childNodes和children功能一样。但是parentNode和childNodes是符合W3C标准的，可以说比较通用。而另外两个只是IE支持，不是标准，Firefox就不支持 ,所以大家只要记得有parentElement和children就行了 </body></html></p>
+</blockquote>
+<p>2 .  DOM操作——怎样添加、移除、移动、复制、创建和查找节点</p>
+<blockquote>
+<p>（1）创建新节点<br>      createDocumentFragment()    //创建一个DOM片段<br>      createElement()   //创建一个具体的元素<br>      createTextNode()   //创建一个文本节点<br>（2）添加、移除、替换、插入<br>      appendChild()<br>      removeChild()<br>      replaceChild()<br>      insertBefore()<br>（3）查找<br>      getElementsByTagName()    //通过标签名称<br>      getElementsByName()    //通过元素的Name属性的值<br>      getElementById()    //通过元素Id，唯一性</p>
 </blockquote>
 </blockquote>
 
@@ -544,6 +548,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/12/js面向对象编程-继承/" rel="prev" title="js面向对象编程-继承">
+                js面向对象编程-继承 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -651,7 +659,7 @@ var jiathis_config={
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -662,7 +670,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -673,7 +681,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -787,7 +795,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      359
+      1.8k
     </span>
   
 </div>
@@ -802,7 +810,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共359字</span>
+  <span class="post-count">博客全站共1.8k字</span>
 </div>
 
         
