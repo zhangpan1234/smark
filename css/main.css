@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3699c4;
+  background: #46d187;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3001,7 +3001,8 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: url("/images/back1.jpg") no-repeat fixed center;
+  background: url("/images/tonghua.jpg") no-repeat fixed center !important;
+  background-size: 100% 100%;
 }
 ::selection {
   background: #6c6;
