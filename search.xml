@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[vue+webpack实现项目的基本配置]]></title>
+      <url>/2017/09/25/vue+webpack%20%E9%85%8D%E7%BD%AE%E7%AF%87/</url>
+      <content type="html"><![CDATA[<hr>
+<p><img src="http://img4.tbcdn.cn/L1/461/1/bfe85a6c83b251c21d6b7c1fd38baae3fa790540" alt="惊喜"></p>
+<h3 id="vue-webpack实现项目的基本配置"><a href="#vue-webpack实现项目的基本配置" class="headerlink" title="vue+webpack实现项目的基本配置"></a>vue+webpack实现项目的基本配置</h3><p><strong><em> 这是一个关于webpack+vue实现的小的Demo，目的是在记录下关于webpack+vue项目中的一些配置。有误的地方还请指出，谢谢 </em></strong></p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><blockquote>
+<p>mkdir vue-webpack  //创建目录<br>cd vue-webpack      //进入目录<br>vue init            //项目初始化</p>
+</blockquote>
+<h4 id="2-创建src-和-dist-目录结构"><a href="#2-创建src-和-dist-目录结构" class="headerlink" title="2.创建src 和 dist 目录结构"></a>2.创建src 和 dist 目录结构</h4><p>src目录结构下的文件即我们在项目中开发的文件，经过webpack打包工具的处理过后，输出到dist目录下的build.js文件.<br>webpack.config.js文件即我们的基本配置文件，webpack的工作流程都是基于这个文件的。<br><strong><em> entry为入口文件即为src目录下的main.js文件，这是项目的核心文件,全局的配置都在这个文件里面配置.output为dist目录下的某某文件。</em></strong><br>这里是自己配置的webpack.config.js文件，需求可以看情况自行添加上去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;)</div><div class="line">var webpack = require(&apos;webpack&apos;)</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line"></div><div class="line">  /******entry and output*******/</div><div class="line">  entry:  __dirname + &quot;/src/main.js&quot;,//已多次提及的唯一入口文件</div><div class="line">  output: &#123;</div><div class="line">    path: __dirname + &quot;/dist&quot;,//打包后的文件存放的地方</div><div class="line">    filename: &quot;build.js&quot;//打包后输出文件的文件名</div><div class="line">  &#125;,</div><div class="line">  resolve: &#123;</div><div class="line">    alias: &#123;</div><div class="line">      &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  // DevServer</div><div class="line">  devServer: &#123;</div><div class="line">    contentBase: &quot;./dist&quot;,//本地服务器所加载的页面所在的目录</div><div class="line">    historyApiFallback: true,//不跳转</div><div class="line">    inline: true//实时刷新</div><div class="line">  &#125;,</div><div class="line">  performance: &#123;</div><div class="line">    hints: false</div><div class="line">  &#125;,</div><div class="line">  // Devtool  DeBug Tool</div><div class="line">  devtool: &apos;#eval-source-map&apos;,</div><div class="line">  /*********loader module***********/</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">    // vue loader</div><div class="line">      &#123;</div><div class="line">        test: /\.vue$/,</div><div class="line">        loader: &apos;vue-loader&apos;,</div><div class="line">        options: &#123;</div><div class="line">          loaders: &#123;</div><div class="line">            &apos;scss&apos;: &apos;vue-style-loader!css-loader!sass-loader&apos;,</div><div class="line">            &apos;sass&apos;: &apos;vue-style-loader!css-loader!sass-loader?indentedSyntax&apos;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      // javascript loader</div><div class="line">      &#123;</div><div class="line">        test: /\.js$/,</div><div class="line">        loader: &apos;babel-loader&apos;,</div><div class="line">        exclude: /node_modules/</div><div class="line">      &#125;,</div><div class="line">      // images loader</div><div class="line">      &#123;</div><div class="line">        test: /\.(png|jpg|gif|svg)$/,</div><div class="line">        loader: &apos;file-loader&apos;,</div><div class="line">        options: &#123;</div><div class="line">          name: &apos;[name].[ext]?[hash]&apos;</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      // css loader</div><div class="line">      &#123;</div><div class="line">        test: /\.css$/,</div><div class="line">        use: [</div><div class="line">            &#123;loader: &quot;style-loader&quot;&#125;,</div><div class="line">            &#123;loader: &quot;sass-loader&quot;&#125;,</div><div class="line">            &#123;</div><div class="line">              loader: &quot;css-loader&quot;,</div><div class="line">              options:&#123;</div><div class="line">                modules: true</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> vue </category>
+            
+            <category> webpack </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2017/09/20]]></title>
       <url>/2017/09/20/2017.09.20/</url>
       <content type="html"><![CDATA[<hr>

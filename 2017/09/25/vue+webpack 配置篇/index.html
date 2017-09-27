@@ -93,7 +93,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,webpack," />
 
 
 
@@ -111,16 +111,20 @@
 
 
 
-<meta name="description" content="种豆得瓜~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雅竹轩~">
-<meta property="og:url" content="http://smark.site/archives/2017/09/index.html">
+<meta name="description" content="vue+webpack实现项目的基本配置 这是一个关于webpack+vue实现的小的Demo，目的是在记录下关于webpack+vue项目中的一些配置。有误的地方还请指出，谢谢  1.创建项目 mkdir vue-webpack  //创建目录cd vue-webpack      //进入目录vue init            //项目初始化  2.创建src 和 dist 目录结构s">
+<meta name="keywords" content="vue,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue+webpack实现项目的基本配置">
+<meta property="og:url" content="http://smark.site/2017/09/25/vue+webpack 配置篇/index.html">
 <meta property="og:site_name" content="雅竹轩~">
-<meta property="og:description" content="种豆得瓜~">
+<meta property="og:description" content="vue+webpack实现项目的基本配置 这是一个关于webpack+vue实现的小的Demo，目的是在记录下关于webpack+vue项目中的一些配置。有误的地方还请指出，谢谢  1.创建项目 mkdir vue-webpack  //创建目录cd vue-webpack      //进入目录vue init            //项目初始化  2.创建src 和 dist 目录结构s">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://img4.tbcdn.cn/L1/461/1/bfe85a6c83b251c21d6b7c1fd38baae3fa790540">
+<meta property="og:updated_time" content="2017-09-25T08:04:01.905Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雅竹轩~">
-<meta name="twitter:description" content="种豆得瓜~">
+<meta name="twitter:title" content="vue+webpack实现项目的基本配置">
+<meta name="twitter:description" content="vue+webpack实现项目的基本配置 这是一个关于webpack+vue实现的小的Demo，目的是在记录下关于webpack+vue项目中的一些配置。有误的地方还请指出，谢谢  1.创建项目 mkdir vue-webpack  //创建目录cd vue-webpack      //进入目录vue init            //项目初始化  2.创建src 和 dist 目录结构s">
+<meta name="twitter:image" content="http://img4.tbcdn.cn/L1/461/1/bfe85a6c83b251c21d6b7c1fd38baae3fa790540">
 
 
 
@@ -150,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://smark.site/archives/2017/09/"/>
+  <link rel="canonical" href="http://smark.site/2017/09/25/vue+webpack 配置篇/"/>
 
 
 
 
 
-  <title>归档 | 雅竹轩~</title>
+  <title>vue+webpack实现项目的基本配置 | 雅竹轩~</title>
   
 
 
@@ -175,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,370 +317,267 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://smark.site/2017/09/25/vue+webpack 配置篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Smark">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雅竹轩~">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">vue+webpack实现项目的基本配置</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T14:04:43+08:00">
+                2017-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
 
-      
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">webpack</span>
+                  </a>
+                </span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2017/09/25/vue+webpack 配置篇/" class="leancloud_visitors" data-flag-title="vue+webpack实现项目的基本配置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/vue+webpack 配置篇/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">vue+webpack实现项目的基本配置</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  419
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T14:04:43+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/20/2017.09.20/" itemprop="url">
-              
-                <span itemprop="name">2017/09/20</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-20T21:46:52+08:00"
-              content="2017-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/13/经典算法之冒泡排序/" itemprop="url">
-              
-                <span itemprop="name">经典算法之冒泡排序</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-13T23:20:30+08:00"
-              content="2017-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <hr>
+<p><img src="http://img4.tbcdn.cn/L1/461/1/bfe85a6c83b251c21d6b7c1fd38baae3fa790540" alt="惊喜"></p>
+<h3 id="vue-webpack实现项目的基本配置"><a href="#vue-webpack实现项目的基本配置" class="headerlink" title="vue+webpack实现项目的基本配置"></a>vue+webpack实现项目的基本配置</h3><p><strong><em> 这是一个关于webpack+vue实现的小的Demo，目的是在记录下关于webpack+vue项目中的一些配置。有误的地方还请指出，谢谢 </em></strong></p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><blockquote>
+<p>mkdir vue-webpack  //创建目录<br>cd vue-webpack      //进入目录<br>vue init            //项目初始化</p>
+</blockquote>
+<h4 id="2-创建src-和-dist-目录结构"><a href="#2-创建src-和-dist-目录结构" class="headerlink" title="2.创建src 和 dist 目录结构"></a>2.创建src 和 dist 目录结构</h4><p>src目录结构下的文件即我们在项目中开发的文件，经过webpack打包工具的处理过后，输出到dist目录下的build.js文件.<br>webpack.config.js文件即我们的基本配置文件，webpack的工作流程都是基于这个文件的。<br><strong><em> entry为入口文件即为src目录下的main.js文件，这是项目的核心文件,全局的配置都在这个文件里面配置.output为dist目录下的某某文件。</em></strong><br>这里是自己配置的webpack.config.js文件，需求可以看情况自行添加上去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;)</div><div class="line">var webpack = require(&apos;webpack&apos;)</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line"></div><div class="line">  /******entry and output*******/</div><div class="line">  entry:  __dirname + &quot;/src/main.js&quot;,//已多次提及的唯一入口文件</div><div class="line">  output: &#123;</div><div class="line">    path: __dirname + &quot;/dist&quot;,//打包后的文件存放的地方</div><div class="line">    filename: &quot;build.js&quot;//打包后输出文件的文件名</div><div class="line">  &#125;,</div><div class="line">  resolve: &#123;</div><div class="line">    alias: &#123;</div><div class="line">      &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  // DevServer</div><div class="line">  devServer: &#123;</div><div class="line">    contentBase: &quot;./dist&quot;,//本地服务器所加载的页面所在的目录</div><div class="line">    historyApiFallback: true,//不跳转</div><div class="line">    inline: true//实时刷新</div><div class="line">  &#125;,</div><div class="line">  performance: &#123;</div><div class="line">    hints: false</div><div class="line">  &#125;,</div><div class="line">  // Devtool  DeBug Tool</div><div class="line">  devtool: &apos;#eval-source-map&apos;,</div><div class="line">  /*********loader module***********/</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">    // vue loader</div><div class="line">      &#123;</div><div class="line">        test: /\.vue$/,</div><div class="line">        loader: &apos;vue-loader&apos;,</div><div class="line">        options: &#123;</div><div class="line">          loaders: &#123;</div><div class="line">            &apos;scss&apos;: &apos;vue-style-loader!css-loader!sass-loader&apos;,</div><div class="line">            &apos;sass&apos;: &apos;vue-style-loader!css-loader!sass-loader?indentedSyntax&apos;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      // javascript loader</div><div class="line">      &#123;</div><div class="line">        test: /\.js$/,</div><div class="line">        loader: &apos;babel-loader&apos;,</div><div class="line">        exclude: /node_modules/</div><div class="line">      &#125;,</div><div class="line">      // images loader</div><div class="line">      &#123;</div><div class="line">        test: /\.(png|jpg|gif|svg)$/,</div><div class="line">        loader: &apos;file-loader&apos;,</div><div class="line">        options: &#123;</div><div class="line">          name: &apos;[name].[ext]?[hash]&apos;</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      // css loader</div><div class="line">      &#123;</div><div class="line">        test: /\.css$/,</div><div class="line">        use: [</div><div class="line">            &#123;loader: &quot;style-loader&quot;&#125;,</div><div class="line">            &#123;loader: &quot;sass-loader&quot;&#125;,</div><div class="line">            &#123;</div><div class="line">              loader: &quot;css-loader&quot;,</div><div class="line">              options:&#123;</div><div class="line">                modules: true</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+</blockquote>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/13/2017.09.13记/" itemprop="url">
-              
-                <span itemprop="name">2017/09/13</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-13T21:57:58+08:00"
-              content="2017-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/js面向对象编程-继承/" itemprop="url">
-              
-                <span itemprop="name">js面向对象编程-继承</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T21:52:54+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/前端开发知识点总结v1.0/" itemprop="url">
-              
-                <span itemprop="name">2017前端开发知识点总结</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T12:43:24+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/js经典案列01/" itemprop="url">
-              
-                <span itemprop="name">Javascript经典案例(var a=b=num)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T23:45:19+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/CSS3创建三角形/" itemprop="url">
-              
-                <span itemprop="name">CSS3创建一个三角形</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T23:07:32+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/06/javascript事件/" itemprop="url">
-              
-                <span itemprop="name">js事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-06T02:50:41+08:00"
-              content="2017-09-06" >
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+          
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/20/2017.09.20/" rel="next" title="2017/09/20">
+                <i class="fa fa-chevron-left"></i> 2017/09/20
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -684,6 +585,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDc2NS83MzE3"></div>
+    
+  </div>
+
 
         </div>
         
@@ -704,8 +611,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -811,6 +727,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-webpack实现项目的基本配置"><span class="nav-number">1.</span> <span class="nav-text">vue+webpack实现项目的基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建项目"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建src-和-dist-目录结构"><span class="nav-number">1.2.</span> <span class="nav-text">2.创建src 和 dist 目录结构</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -957,6 +889,11 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
 
   
 
@@ -985,6 +922,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
