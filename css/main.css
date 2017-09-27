@@ -3033,6 +3033,21 @@ body {
   -webkit-background-size: 400% 400%;
   -webkit-animation: masked-animation 10s linear infinite alternate;
 }
+.ciba_ds_con .l{
+	color:#fff;
+}
+.ciba_ds{
+	font-family:"微软雅黑";
+	border-radius:20px;
+    opacity:.7;
+	background-image: -webkit-gradient(linear, left top, right bottom, from(#005831), to(#45b97c));
+}
+.ciba_ds .ciba_ds_juzi a{
+	color:#fff;
+}
+.ciba_ds_juzi a:hover{
+	text-decoration:none !important;
+}
 @-webkit-keyframes masked-animation {
   0% {
     background-position: left top;
