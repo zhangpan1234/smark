@@ -3039,8 +3039,10 @@ body {
 .ciba_ds{
 	font-family:"微软雅黑";
 	border-radius:20px;
-    opacity:.7;
+    	opacity:.7;
 	background-image: -webkit-gradient(linear, left top, right bottom, from(#005831), to(#45b97c));
+	-webkit-background-size: 250% 250%;
+	-webkit-animation:  masked-animation 6s linear infinite alternate;
 }
 .ciba_ds .ciba_ds_juzi a{
 	color:#fff;
